@@ -9,8 +9,10 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import type { GalleryImage } from '@/types'
 
-export function GallerySection() {
+export function GallerySection({ limit }: { limit?: number } = {}) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+  
+  const displayImages = limit ? galleryImages.slice(0, limit) : galleryImages
   
   const openLightbox = useCallback((index: number) => {
     setLightboxIndex(index)
@@ -42,7 +44,7 @@ export function GallerySection() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            {galleryImages.map((image, index) => (
+            {displayImages.map((image, index) => (
               <GalleryItem
                 key={image.id}
                 image={image}
@@ -54,22 +56,23 @@ export function GallerySection() {
           </motion.div>
         </AnimatePresence>
         
-        {/* View All Link */}
-        <div className="text-center mt-16">
-          <a
-            href="/galerija"
-            className="inline-flex items-center gap-3 font-body text-sm tracking-widest uppercase text-smoke hover:text-obsidian transition-colors duration-300 group"
-          >
-            <span>Pogledajte kompletnu galeriju</span>
-            <span className="w-8 h-px bg-current transition-all group-hover:w-16" />
-          </a>
-        </div>
+        {/* View All Link - only show if limit is set */}
+        {limit && galleryImages.length > limit && (
+          <div className="text-center mt-16">
+            <a
+              href="/galerija"
+              className="inline-flex items-center gap-4 px-10 py-4 bg-obsidian text-cream font-body text-xs tracking-[0.2em] uppercase hover:bg-gold hover:text-obsidian transition-all duration-500 shadow-xl"
+            >
+              <span>Pogledajte kompletnu galeriju</span>
+            </a>
+          </div>
+        )}
       </div>
       
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <Lightbox
-          images={galleryImages}
+          images={displayImages}
           initialIndex={lightboxIndex}
           onClose={closeLightbox}
         />
@@ -110,8 +113,6 @@ function GalleryItem({
           priority={isPriority}
           loading={isPriority ? 'eager' : 'lazy'}
           quality={85}
-          placeholder="blur"
-          blurDataURL={image.blurDataURL}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
           className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
         />

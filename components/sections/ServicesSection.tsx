@@ -13,7 +13,7 @@ const services = [
     title: 'Fotografija vjenčanja',
     description: 'Svaki pogled, svaka suza, svaki zagrljaj — uhvaćeni u savršenom trenutku. Fotografije koje ćete čuvati generacijama.',
     href: '/usluge/fotografisanje',
-    imageSrc: '/images/services/photography.jpg',
+    imageSrc: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop',
     imageAlt: 'Profesionalna fotografija vjenčanja',
   },
   {
@@ -22,7 +22,7 @@ const services = [
     title: 'Video produkcija vjenčanja',
     description: 'Vrhunsko filmsko snimanje koje priča vašu jedinstvenu priču. Dostupni smo za vjenčanja u cijeloj BiH i širom Evrope.',
     href: '/usluge/snimanje',
-    imageSrc: '/images/services/videography.jpg',
+    imageSrc: 'https://images.unsplash.com/photo-1581338834647-b0fb40704e21?q=80&w=1974&auto=format&fit=crop',
     imageAlt: 'Video produkcija vjenčanja Prijedor',
   },
   {
@@ -31,7 +31,7 @@ const services = [
     title: 'Snimanje dronom',
     description: 'Spektakularne perspektive iz zraka pomoću DJI Avata drona. Najljepši predjeli Bosne i Hercegovine ili Evrope viđeni iz nebeskog ugla.',
     href: '/usluge/dron',
-    imageSrc: '/images/services/drone.jpg',
+    imageSrc: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2070&auto=format&fit=crop',
     imageAlt: 'Snimanje vjenčanja dronom Bosna',
   },
 ]
@@ -62,8 +62,6 @@ export function ServicesSection() {
                     quality={85}
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA..."
                   />
                   <div className="absolute inset-0 bg-obsidian/20 group-hover:bg-obsidian/10 transition-colors duration-500" />
 

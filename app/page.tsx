@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <GallerySection />
+      <GallerySection limit={10} />
       <AboutSection />
       <ServicesSection />
       <VideoSection />

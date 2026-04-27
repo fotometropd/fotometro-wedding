@@ -27,28 +27,24 @@ export function AboutSection() {
               {/* Main photographer portrait */}
               <div className="relative z-10 overflow-hidden">
                 <Image
-                  src="/images/about-portrait.jpg"
+                  src="/images/gallery/fotometro-wedding-105.jpg"
                   alt="Svadbeni fotograf Prijedor, Bosna i Hercegovina — Fotometro Wedding"
                   width={600}
                   height={750}
                   quality={90}
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoH" // Example blurDataURL
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-auto object-cover"
                 />
               </div>
 
               {/* Small accent image overlapping */}
-              <div className="absolute -bottom-8 -right-8 w-48 h-48 overflow-hidden border-4 border-cream shadow-xl z-20 hidden lg:block">
+              <div className="absolute -bottom-8 -right-8 w-48 h-48 overflow-hidden shadow-xl z-20 hidden lg:block">
                 <Image
-                  src="/images/about-accent.jpg"
+                  src="/images/gallery/fotometro-wedding-110.jpg"
                   alt="Snimanje vjenčanja dronom Bosna i Hercegovina"
                   width={200}
                   height={200}
                   quality={80}
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/"
                   className="w-full h-full object-cover"
                 />
               </div>

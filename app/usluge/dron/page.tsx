@@ -12,8 +12,8 @@ export default function DroneServicePage() {
   return (
     <>
       <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 bg-obsidian overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-obsidian via-obsidian/80 to-cream" />
+        {/* Background - solid obsidian for premium look */}
+        <div className="absolute inset-0 z-0 bg-obsidian" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -71,7 +71,7 @@ export default function DroneServicePage() {
             <ScrollReveal direction="right" delay={0.3}>
               <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:max-w-none">
                 <Image
-                  src="https://images.unsplash.com/photo-1579826353982-f67fba9f9db1?q=80&w=2070&auto=format&fit=crop"
+                  src="/images/gallery/fotometro-wedding-145.jpg"
                   alt="DJI Dron snimanje iz zraka"
                   fill
                   className="object-cover rounded-sm shadow-2xl"

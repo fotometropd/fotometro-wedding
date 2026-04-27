@@ -67,7 +67,7 @@ export function Footer() {
           <div>
             <h4 className="font-body text-xs tracking-widest uppercase text-white mb-6">Popularne Lokacije</h4>
             <ul className="space-y-3">
-              <li className="font-body text-cream/60 text-sm">📍 Prijedor (Baza)</li>
+              <li className="font-body text-cream/60 text-sm">📍 Prijedor (Studio)</li>
               {topCities.map(city => (
                 <li key={city.slug}>
                   <Link href={`/vjencanja/${city.slug}`} className="font-body text-cream/60 hover:text-gold text-sm transition-colors">

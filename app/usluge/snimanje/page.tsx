@@ -12,12 +12,12 @@ export default function VideoServicePage() {
   return (
     <>
       <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 bg-obsidian overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-obsidian via-obsidian/80 to-cream" />
-        
+        {/* Background - solid obsidian for premium look */}
+        <div className="absolute inset-0 z-0 bg-obsidian" />
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            
+
             {/* Text content */}
             <div className="text-white space-y-8 lg:order-2">
               <ScrollReveal>
@@ -27,13 +27,12 @@ export default function VideoServicePage() {
                 </h1>
                 <div className="w-16 h-px bg-gold/50 my-8" />
                 <p className="font-body text-cream/80 text-lg leading-relaxed">
-                  Zaboravite na dugačke, monotone i dosadne snimke svadbi kakvi su se radili nekada. 
-                  Naš pristup snimanju je strogo filmski (cinematic). Mi kreiramo dinamičan, emotivan i vizualno 
-                  spektakularan film koji ćete sa ponosom puštati iznova i iznova.
+                  Zaboravite na dugačke, monotone i dosadne snimke svadbi kakvi su se radili nekada.
+                  Mi kreiramo dinamičan, emotivan i vizualno spektakularan video koji ćete sa ponosom puštati iznova i iznova.
                 </p>
                 <p className="font-body text-cream/80 text-lg leading-relaxed mt-4">
-                  Koristimo najsavremeniju filmsku opremu, stabilizatore i posebnu pažnju posvećujemo dizajnu zvuka — 
-                  jer bez savršenog zvuka vaših zavjeta i govora, film nije potpun.
+                  Koristimo najsavremeniju filmsku opremu, stabilizatore i posebnu pažnju posvećujemo dizajnu zvuka —
+                  jer bez savršenog zvuka vaših zavjeta i govora, video nije potpun.
                 </p>
               </ScrollReveal>
 
@@ -71,14 +70,14 @@ export default function VideoServicePage() {
             <ScrollReveal direction="left" delay={0.3}>
               <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:max-w-none lg:order-1">
                 <Image
-                  src="https://images.unsplash.com/photo-1589808381864-42fbc944ebbb?q=80&w=2070&auto=format&fit=crop"
+                  src="/images/gallery/fotometro-wedding-140.jpg"
                   alt="Filmsko snimanje vjenčanja kamerom"
                   fill
                   className="object-cover rounded-sm shadow-2xl"
                 />
               </div>
             </ScrollReveal>
-            
+
           </div>
         </div>
       </section>

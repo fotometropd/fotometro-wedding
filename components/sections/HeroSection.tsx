@@ -3,7 +3,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
+
+const HERO_IMAGES = [
+  '/images/gallery/fotometro-wedding-100.jpg',
+  '/images/gallery/fotometro-wedding-120.jpg',
+  '/images/gallery/fotometro-wedding-140.jpg',
+]
 
 interface HeroSectionProps {
   cityTitle?: React.ReactNode
@@ -11,7 +18,16 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ cityTitle, citySubtitle }: HeroSectionProps = {}) {
+  const [currentIndex, setCurrentIndex] = useState(0)
   const ref = useRef(null)
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % HERO_IMAGES.length)
+    }, 5000) // Change image every 5 seconds
+    return () => clearInterval(timer)
+  }, [])
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"]
@@ -23,17 +39,28 @@ export function HeroSection({ cityTitle, citySubtitle }: HeroSectionProps = {}) 
   return (
     <section ref={ref} className="relative h-[100dvh] min-h-[600px] flex items-center justify-center overflow-hidden bg-obsidian">
 
-      {/* Background Image — PRIORITY: loads immediately, affects LCP */}
+      {/* Background Slideshow */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop"
-          alt="Luksuzni svadbeni fotograf i snimatelj - Vjenčanje Prijedor, Bosna i Hercegovina"
-          fill
-          priority
-          quality={95}
-          sizes="100vw"
-          className="object-cover object-center motion-safe:animate-slow-zoom"
-        />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={HERO_IMAGES[currentIndex]}
+              alt="Ekskluzivni svadbeni fotograf i snimatelj"
+              fill
+              priority
+              quality={95}
+              sizes="100vw"
+              className="object-cover object-center motion-safe:animate-slow-zoom"
+            />
+          </motion.div>
+        </AnimatePresence>
       </motion.div>
 
       {/* Refined gradient overlays for maximum text legibility and luxury feel */}
