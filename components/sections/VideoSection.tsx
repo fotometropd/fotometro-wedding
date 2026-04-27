@@ -22,7 +22,7 @@ export function VideoSection() {
               Osjetite magiju našeg rada
             </h2>
             <p className="font-body text-cream/60 mt-4 max-w-lg mx-auto">
-              Kratki isječak koji prikazuje našu viziju i stil — emotivno, cineastično, vječno.
+              Kratki isječak koji prikazuje našu viziju i stil — emotivno, filmsko, vječno.
             </p>
           </div>
         </ScrollReveal>

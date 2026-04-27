@@ -15,7 +15,7 @@ const navLinks = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +24,7 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-  
+
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -33,16 +33,15 @@ export function Navbar() {
       document.body.style.overflow = 'unset'
     }
   }, [isMobileMenuOpen])
-  
+
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled ? 'bg-obsidian/95 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-obsidian/95 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
-          
+
           {/* Logo */}
           <Link href="/" className="relative z-50 group" onClick={() => setIsMobileMenuOpen(false)}>
             <div className="font-heading text-2xl tracking-widest text-white transition-colors duration-300">
@@ -52,7 +51,7 @@ export function Navbar() {
               Wedding
             </div>
           </Link>
-          
+
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -66,7 +65,7 @@ export function Navbar() {
               </Link>
             ))}
           </nav>
-          
+
           {/* Mobile Menu Toggle */}
           <button
             className="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
@@ -79,7 +78,7 @@ export function Navbar() {
           </button>
         </div>
       </header>
-      
+
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -107,7 +106,7 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-              
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -115,8 +114,8 @@ export function Navbar() {
                 className="mt-12 flex flex-col items-center gap-4 text-center"
               >
                 <div className="w-12 h-px bg-gold/50" />
-                <a href="tel:+38700000000" className="font-body text-sm text-white/60 tracking-widest">+387 00 000 000</a>
-                <a href="mailto:info@fotometrowedding.com" className="font-body text-sm text-white/60 tracking-widest">info@fotometrowedding.com</a>
+                <a href="tel:+38765679112" className="font-body text-sm text-white/60 tracking-widest">+387 65 679 112</a>
+                <a href="mailto:fotometropd@gmail.com" className="font-body text-sm text-white/60 tracking-widest">fotometropd@gmail.com</a>
               </motion.div>
             </nav>
           </motion.div>

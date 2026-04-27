@@ -3,19 +3,14 @@
 import { useState, useCallback } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { galleryImages, galleryCategories } from '@/lib/gallery-data'
+import { galleryImages } from '@/lib/gallery-data'
 import { Lightbox } from '@/components/ui/Lightbox'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import type { GalleryImage } from '@/types'
 
 export function GallerySection() {
-  const [activeCategory, setActiveCategory] = useState<string>('sve')
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
-  
-  const filteredImages = activeCategory === 'sve'
-    ? galleryImages
-    : galleryImages.filter(img => img.category === activeCategory)
   
   const openLightbox = useCallback((index: number) => {
     setLightboxIndex(index)
@@ -37,36 +32,17 @@ export function GallerySection() {
           />
         </ScrollReveal>
         
-        {/* Category Filter Tabs */}
-        <ScrollReveal delay={0.1}>
-          <div className="flex flex-wrap gap-2 justify-center mt-10 mb-12">
-            {galleryCategories.map((cat) => (
-              <button
-                key={cat.value}
-                onClick={() => setActiveCategory(cat.value)}
-                className={`px-6 py-2.5 font-body text-sm tracking-wider uppercase transition-all duration-300 border ${
-                  activeCategory === cat.value
-                    ? 'bg-obsidian text-cream border-obsidian'
-                    : 'bg-transparent text-smoke border-silk hover:border-obsidian hover:text-obsidian'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
-        </ScrollReveal>
-        
+
         {/* Masonry Grid */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeCategory}
-            className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4"
+            className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4 mt-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            {filteredImages.map((image, index) => (
+            {galleryImages.map((image, index) => (
               <GalleryItem
                 key={image.id}
                 image={image}
@@ -93,7 +69,7 @@ export function GallerySection() {
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <Lightbox
-          images={filteredImages}
+          images={galleryImages}
           initialIndex={lightboxIndex}
           onClose={closeLightbox}
         />

@@ -23,12 +23,22 @@ const dmSans = DM_Sans({
 
 // Global Metadata
 export const metadata: Metadata = {
+  metadataBase: new URL('https://fotometrowedding.com'),
   title: {
     template: '%s | Fotometro Wedding',
-    default: 'Fotometro Wedding | Ekskluzivna fotografija i videografija vjenčanja',
+    default: 'Fotometro Wedding | Moderna Fotografija i Snimanje Vjenčanja Prijedor',
   },
-  description: 'Profesionalna fotografija, cineastično snimanje i snimanje dronom DJI Avata. Više od 20 godina iskustva u bilježenju vaših najljepših uspomena.',
-  keywords: ['fotografisanje vjenčanja', 'snimanje vjenčanja', 'wedding photographer', 'BiH', 'Prijedor', 'Banja Luka', 'dron snimanje', 'svadba'],
+  description: 'Vrhunska fotografija, filmsko snimanje i snimanje dronom. Više od 20 godina iskustva u bilježenju vaših najljepših uspomena u Prijedoru, širom Bosne i Hercegovine i Evrope.',
+  keywords: [
+    'snimanje vjenčanja Prijedor',
+    'fotograf za svadbe Prijedor',
+    'fotografisanje vjenčanja BiH',
+    'wedding videographer Bosnia',
+    'svadbeni fotograf Banja Luka',
+    'snimanje dronom vjenčanja BiH',
+    'destination wedding photographer Europe',
+    'filmsko snimanje svadbi'
+  ],
   authors: [{ name: 'Fotometro' }],
   creator: 'Fotometro',
   publisher: 'Fotometro Wedding',
@@ -38,8 +48,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Fotometro Wedding | Ekskluzivna fotografija',
-    description: 'Profesionalna fotografija i videografija vjenčanja sa više od 20 godina iskustva.',
+    title: 'Fotometro Wedding | Moderna Fotografija i Snimanje Vjenčanja',
+    description: 'Najbolji fotograf i snimatelj za vjenčanja u Prijedoru i Bosni i Hercegovini. Profesionalna video produkcija i snimanje dronom za klijente širom Evrope.',
     url: 'https://fotometrowedding.com',
     siteName: 'Fotometro Wedding',
     images: [

@@ -28,7 +28,7 @@ export function AboutSection() {
               <div className="relative z-10 overflow-hidden">
                 <Image
                   src="/images/about-portrait.jpg"
-                  alt="Fotometro Wedding — fotograf i videograf vjenčanja"
+                  alt="Svadbeni fotograf Prijedor, Bosna i Hercegovina — Fotometro Wedding"
                   width={600}
                   height={750}
                   quality={90}
@@ -43,7 +43,7 @@ export function AboutSection() {
               <div className="absolute -bottom-8 -right-8 w-48 h-48 overflow-hidden border-4 border-cream shadow-xl z-20 hidden lg:block">
                 <Image
                   src="/images/about-accent.jpg"
-                  alt="Snimanje dronom na vjenčanju"
+                  alt="Snimanje vjenčanja dronom Bosna i Hercegovina"
                   width={200}
                   height={200}
                   quality={80}
@@ -63,24 +63,24 @@ export function AboutSection() {
 
               <h2 className="font-heading font-light text-obsidian" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: '1.1' }}>
                 Više od dvije decenije<br />
-                <em>čuvam vaše uspomene</em>
+                <em>čuvamo vaše uspomene</em>
               </h2>
 
               <div className="w-12 h-px bg-gold my-6" />
 
               <p className="font-body text-stone text-lg leading-relaxed">
-                Fotometro je studio koji je izrastao iz iskrene ljubavi prema fotografiji i filmovanju. Više od 20 godina provodimo na vjenčanjima, bilježeći one trenutke koji se nikada ne mogu ponoviti — suzu radosnicu, smijeh, pogled koji govori sve.
+                Fotometro je studio koji je izrastao iz iskrene ljubavi prema fotografiji i video produkciji. Sa bazom u <strong>Prijedoru</strong>, više od 20 godina provodimo bilježeći vjenčanja širom <strong>Bosne i Hercegovine</strong> i <strong>Evrope</strong>. Za nas, svako vjenčanje je prilika da sačuvamo neponovljive trenutke — suzu radosnicu, iskren osmijeh i poglede koji govore više od riječi.
               </p>
 
               <p className="font-body text-stone leading-relaxed">
-                Kombinujemo klasičnu fotografiju, cineastično snimanje i modernu tehnologiju snimanja dronom DJI Avata, kako bismo vam pružili kompletnu vizualnu priču vašeg posebnog dana.
+                Bilo da planirate vjenčanje u Banjoj Luci, Sarajevu, na primorju ili bilo kojoj evropskoj destinaciji, mi smo tu. Kombinujemo klasičnu fotografiju, vrhunsko filmsko snimanje i najmoderniju tehnologiju snimanja dronom (DJI Avata), kako bismo vam pružili kompletnu vizualnu priču vašeg posebnog dana.
               </p>
 
               {/* Services mini-list */}
               <ul className="space-y-3 pt-2">
                 {[
                   'Profesionalna fotografija vjenčanja',
-                  'Cineastično snimanje vjenčanja',
+                  'Filmsko snimanje vjenčanja',
                   'Snimanje dronom — DJI Avata',
                   'Portretna i engagement fotografija',
                 ].map((item) => (

@@ -1,14 +1,17 @@
 import Link from 'next/link'
 
+import { cities } from '@/lib/cities-data'
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const topCities = cities.slice(0, 5) // Show top 5 cities
 
   return (
     <footer className="bg-obsidian border-t border-white/10 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
 
         {/* Top section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
 
           {/* Brand */}
           <div className="lg:col-span-2">
@@ -17,7 +20,7 @@ export function Footer() {
               <div className="font-body text-xs tracking-[0.3em] uppercase text-gold/80 mt-1">Wedding</div>
             </Link>
             <p className="font-body text-cream/60 leading-relaxed max-w-sm text-sm">
-              Profesionalna fotografija, cineastično snimanje i snimanje dronom. Više od 20 godina iskustva u bilježenju vaših najljepših uspomena.
+              Profesionalna fotografija, filmsko snimanje i snimanje dronom. Više od 20 godina iskustva u bilježenju vaših najljepših uspomena.
             </p>
           </div>
 
@@ -57,6 +60,22 @@ export function Footer() {
                   YouTube
                 </a>
               </li>
+            </ul>
+          </div>
+
+          {/* Local SEO / Areas Served */}
+          <div>
+            <h4 className="font-body text-xs tracking-widest uppercase text-white mb-6">Popularne Lokacije</h4>
+            <ul className="space-y-3">
+              <li className="font-body text-cream/60 text-sm">📍 Prijedor (Baza)</li>
+              {topCities.map(city => (
+                <li key={city.slug}>
+                  <Link href={`/vjencanja/${city.slug}`} className="font-body text-cream/60 hover:text-gold text-sm transition-colors">
+                    📍 {city.name}
+                  </Link>
+                </li>
+              ))}
+              <li className="font-body text-cream/60 text-sm mt-2 pt-2 border-t border-white/10">✈️ Destination (Evropa)</li>
             </ul>
           </div>
         </div>

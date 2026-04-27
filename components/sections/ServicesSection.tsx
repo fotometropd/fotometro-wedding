@@ -19,20 +19,20 @@ const services = [
   {
     id: 'snimanje',
     eyebrow: '02',
-    title: 'Snimanje vjenčanja',
-    description: 'Cineastični film vašeg vjenčanja koji priča vašu jedinstvenu ljubavnu priču — sa emocijama koje osjećate iznova i iznova.',
+    title: 'Video produkcija vjenčanja',
+    description: 'Vrhunsko filmsko snimanje koje priča vašu jedinstvenu priču. Dostupni smo za vjenčanja u cijeloj BiH i širom Evrope.',
     href: '/usluge/snimanje',
     imageSrc: '/images/services/videography.jpg',
-    imageAlt: 'Profesionalno snimanje vjenčanja',
+    imageAlt: 'Video produkcija vjenčanja Prijedor',
   },
   {
     id: 'dron',
     eyebrow: '03',
     title: 'Snimanje dronom',
-    description: 'Spektakularne perspektive iz zraka pomoću DJI Avata drona. Vaše vjenčanje viđeno iz nebeskog ugla.',
+    description: 'Spektakularne perspektive iz zraka pomoću DJI Avata drona. Najljepši predjeli Bosne i Hercegovine ili Evrope viđeni iz nebeskog ugla.',
     href: '/usluge/dron',
     imageSrc: '/images/services/drone.jpg',
-    imageAlt: 'Snimanje vjenčanja dronom DJI Avata',
+    imageAlt: 'Snimanje vjenčanja dronom Bosna',
   },
 ]
 

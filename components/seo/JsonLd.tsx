@@ -7,15 +7,34 @@ export function JsonLd() {
         '@type': ['LocalBusiness', 'Photographer'],
         '@id': 'https://fotometrowedding.com/#business',
         name: 'Fotometro Wedding',
-        description: 'Profesionalna fotografija i videografija vjenčanja sa više od 20 godina iskustva. Snimanje dronom DJI Avata.',
+        description: 'Moderna fotografija, filmsko snimanje i snimanje dronom za vjenčanja u Prijedoru, širom Bosne i Hercegovine i Evrope.',
         url: 'https://fotometrowedding.com',
-        telephone: '+38700000000',
-        email: 'info@fotometrowedding.com',
+        telephone: '+38765679112',
+        email: 'fotomeropd@gmail.com',
         address: {
           '@type': 'PostalAddress',
+          addressLocality: 'Prijedor',
+          addressRegion: 'Republika Srpska',
           addressCountry: 'BA',
-          addressRegion: 'Bosna i Hercegovina',
         },
+        areaServed: [
+          {
+            '@type': 'City',
+            name: 'Prijedor'
+          },
+          {
+            '@type': 'City',
+            name: 'Banja Luka'
+          },
+          {
+            '@type': 'Country',
+            name: 'Bosnia and Herzegovina'
+          },
+          {
+            '@type': 'Continent',
+            name: 'Europe'
+          }
+        ],
         geo: {
           '@type': 'GeoCoordinates',
           latitude: 44.7722, // Update with actual coordinates
@@ -52,7 +71,7 @@ export function JsonLd() {
               itemOffered: {
                 '@type': 'Service',
                 name: 'Snimanje vjenčanja',
-                description: 'Cineastično snimanje i video produkcija vjenčanja',
+                description: 'Filmsko snimanje i video produkcija vjenčanja',
               },
             },
             {

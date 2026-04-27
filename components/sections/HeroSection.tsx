@@ -5,7 +5,12 @@ import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
-export function HeroSection() {
+interface HeroSectionProps {
+  cityTitle?: React.ReactNode
+  citySubtitle?: React.ReactNode
+}
+
+export function HeroSection({ cityTitle, citySubtitle }: HeroSectionProps = {}) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -22,7 +27,7 @@ export function HeroSection() {
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop"
-          alt="Luksuzna fotografija vjenčanja — Mladenka i mladoženja"
+          alt="Luksuzni svadbeni fotograf i snimatelj - Vjenčanje Prijedor, Bosna i Hercegovina"
           fill
           priority
           quality={95}
@@ -32,8 +37,10 @@ export function HeroSection() {
       </motion.div>
 
       {/* Refined gradient overlays for maximum text legibility and luxury feel */}
-      <div className="absolute inset-0 z-1 bg-obsidian/30" />
-      <div className="absolute inset-0 z-1 bg-gradient-to-b from-obsidian/60 via-obsidian/20 to-obsidian/80" />
+      <div className="absolute inset-0 z-1 bg-obsidian/40" />
+      <div className="absolute inset-0 z-1 bg-gradient-to-b from-obsidian/80 via-transparent to-obsidian/90" />
+      {/* Subtle radial overlay directly behind the text for extra pop */}
+      <div className="absolute inset-0 z-1 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-obsidian/50 via-transparent to-transparent" />
 
       {/* Content */}
       <motion.div
@@ -63,19 +70,27 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.0, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <span className="block italic">Vjenčanja koja</span>
-          <span className="block mt-2 text-gold-light">traju zauvijek</span>
+          {cityTitle ? cityTitle : (
+            <>
+              <span className="block italic">Mi čuvamo</span>
+              <span className="block mt-2 text-gold-light">vaše uspomene</span>
+            </>
+          )}
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p
-          className="font-body text-white/90 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 sm:mb-12 font-light leading-relaxed drop-shadow-sm"
+          className="font-body text-white/90 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 sm:mb-12 font-light leading-relaxed drop-shadow-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          Ekskluzivna fotografija, cineastično filmovanje i snimanje dronom.
-          Više od 20 godina umjetnosti čuvanja vaših najljepših uspomena.
+          {citySubtitle ? citySubtitle : (
+            <>
+              Moderna fotografija, filmsko snimanje i snimanje dronom.
+              Više od 20 godina stvaramo najljepše uspomene u <strong className="font-medium text-white">Prijedoru</strong>, širom <strong className="font-medium text-white">Bosne i Hercegovine</strong> i <strong className="font-medium text-white">Evrope</strong>.
+            </>
+          )}
         </motion.p>
 
         {/* CTAs */}
