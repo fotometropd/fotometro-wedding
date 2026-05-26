@@ -38,7 +38,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="usluge" className="py-24 bg-cream">
+    <section id="usluge" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
 
         <ScrollReveal>
@@ -63,7 +63,7 @@ export function ServicesSection() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-obsidian/20 group-hover:bg-obsidian/10 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
 
                   {/* Number overlay */}
                   <div className="absolute top-6 left-6">
@@ -80,9 +80,9 @@ export function ServicesSection() {
                   <p className="font-body text-stone text-sm leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="flex items-center gap-2 font-body text-xs tracking-widest uppercase text-gold">
+                  <div className="flex items-center gap-2 font-body text-[10px] tracking-widest uppercase text-charcoal">
                     <span>Saznajte više</span>
-                    <span className="w-6 h-px bg-gold group-hover:w-10 transition-all duration-300" />
+                    <span className="w-6 h-[1px] bg-charcoal group-hover:w-10 transition-all duration-300" />
                   </div>
                 </div>
               </Link>

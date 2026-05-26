@@ -23,7 +23,7 @@ export function GallerySection({ limit }: { limit?: number } = {}) {
   }, [])
   
   return (
-    <section id="galerija" className="py-24 bg-cream">
+    <section id="galerija" className="py-32 bg-white">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-8">
         
         <ScrollReveal>
@@ -61,7 +61,7 @@ export function GallerySection({ limit }: { limit?: number } = {}) {
           <div className="text-center mt-16">
             <a
               href="/galerija"
-              className="inline-flex items-center gap-4 px-10 py-4 bg-obsidian text-cream font-body text-xs tracking-[0.2em] uppercase hover:bg-gold hover:text-obsidian transition-all duration-500 shadow-xl"
+              className="inline-flex items-center gap-4 px-10 py-4 bg-transparent border border-stone/30 text-charcoal font-body text-[10px] tracking-[0.2em] uppercase hover:border-charcoal transition-all duration-500"
             >
               <span>Pogledajte kompletnu galeriju</span>
             </a>
@@ -118,7 +118,7 @@ function GalleryItem({
         />
         
         {/* Hover overlay */}
-        <div className="absolute inset-0 bg-obsidian/0 group-hover:bg-obsidian/30 transition-all duration-500 flex items-center justify-center">
+        <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-all duration-500 flex items-center justify-center">
           <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="w-12 h-12 border border-white/80 flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">

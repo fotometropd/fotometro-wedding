@@ -14,7 +14,7 @@ const stats = [
 
 export function AboutSection() {
   return (
-    <section id="o-meni" className="py-24 bg-linen overflow-hidden">
+    <section id="o-meni" className="py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
@@ -64,11 +64,11 @@ export function AboutSection() {
 
               <div className="w-12 h-px bg-gold my-6" />
 
-              <p className="font-body text-stone text-lg leading-relaxed">
+              <p className="font-body text-charcoal/80 text-lg leading-relaxed">
                 Fotometro je studio koji je izrastao iz iskrene ljubavi prema fotografiji i video produkciji. Sa bazom u <strong>Prijedoru</strong>, više od 20 godina provodimo bilježeći vjenčanja širom <strong>Bosne i Hercegovine</strong> i <strong>Evrope</strong>. Za nas, svako vjenčanje je prilika da sačuvamo neponovljive trenutke — suzu radosnicu, iskren osmijeh i poglede koji govore više od riječi.
               </p>
 
-              <p className="font-body text-stone leading-relaxed">
+              <p className="font-body text-charcoal/80 leading-relaxed">
                 Bilo da planirate vjenčanje u Banjoj Luci, Sarajevu, na primorju ili bilo kojoj evropskoj destinaciji, mi smo tu. Kombinujemo klasičnu fotografiju, vrhunsko filmsko snimanje i najmoderniju tehnologiju snimanja dronom (DJI Avata), kako bismo vam pružili kompletnu vizualnu priču vašeg posebnog dana.
               </p>
 
@@ -80,7 +80,7 @@ export function AboutSection() {
                   'Snimanje dronom — DJI Avata',
                   'Portretna i engagement fotografija',
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 font-body text-smoke text-sm">
+                  <li key={item} className="flex items-center gap-3 font-body text-charcoal text-sm">
                     <span className="w-4 h-px bg-gold flex-shrink-0" />
                     {item}
                   </li>

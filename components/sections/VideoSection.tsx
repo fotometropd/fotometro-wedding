@@ -12,16 +12,16 @@ export function VideoSection() {
   const [isLoaded, setIsLoaded] = useState(false)
   
   return (
-    <section className="py-24 bg-obsidian overflow-hidden">
+    <section className="py-32 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-8">
         
         <ScrollReveal>
           <div className="text-center mb-12">
-            <p className="text-eyebrow mb-4">Showreel</p>
-            <h2 className="font-heading font-light italic text-cream" style={{ fontSize: 'clamp(32px, 5vw, 60px)' }}>
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-stone mb-4">Showreel</p>
+            <h2 className="font-heading font-light italic text-obsidian" style={{ fontSize: 'clamp(32px, 5vw, 60px)' }}>
               Osjetite magiju našeg rada
             </h2>
-            <p className="font-body text-cream/60 mt-4 max-w-lg mx-auto">
+            <p className="font-body text-charcoal/70 mt-4 max-w-lg mx-auto">
               Kratki isječak koji prikazuje našu viziju i stil — emotivno, filmsko, vječno.
             </p>
           </div>
@@ -46,7 +46,7 @@ export function VideoSection() {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-obsidian/40 group-hover:bg-obsidian/30 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                 
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
