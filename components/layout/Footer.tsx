@@ -18,12 +18,35 @@ export function Footer() {
           <a href="mailto:fotometropd@gmail.com" className="font-body text-[10px] tracking-[0.2em] uppercase text-[#111111] hover:text-[#777777] transition-colors">
             Pošaljite Upit
           </a>
-          <a href="https://instagram.com/fotometro_wedding" target="_blank" rel="noopener noreferrer" className="font-body text-[10px] tracking-[0.2em] uppercase text-[#111111] hover:text-[#777777] transition-colors">
-            Instagram
-          </a>
-          <a href="https://facebook.com/fotometropd" target="_blank" rel="noopener noreferrer" className="font-body text-[10px] tracking-[0.2em] uppercase text-[#111111] hover:text-[#777777] transition-colors">
-            Facebook
-          </a>
+        </div>
+
+        {/* SEO Location Links (Subtle) */}
+        <div className="w-full border-t border-stone/20 pt-12 mb-8">
+          <p className="font-body text-[9px] tracking-[0.3em] uppercase text-stone mb-6">Dostupni u gradovima</p>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 max-w-4xl mx-auto">
+            <Link href="/vjencanja/banja-luka" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Banja Luka</Link>
+            <Link href="/vjencanja/sarajevo" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Sarajevo</Link>
+            <Link href="/vjencanja/mostar" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Mostar</Link>
+            <Link href="/vjencanja/tuzla" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Tuzla</Link>
+            <Link href="/vjencanja/prijedor" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Prijedor</Link>
+            <Link href="/vjencanja/bihac" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Bihać</Link>
+            <Link href="/vjencanja/zenica" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Zenica</Link>
+            <Link href="/vjencanja/bijeljina" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Bijeljina</Link>
+            <Link href="/vjencanja/doboj" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Doboj</Link>
+            <Link href="/vjencanja/trebinje" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Trebinje</Link>
+            <Link href="/vjencanja/brcko" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Brčko</Link>
+            
+            <Link href="/vjencanja/zagreb" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Zagreb</Link>
+            <Link href="/vjencanja/beograd" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Beograd</Link>
+            
+            <Link href="/vjencanja/split" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Split</Link>
+            <Link href="/vjencanja/dubrovnik" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Dubrovnik</Link>
+            <Link href="/vjencanja/zadar" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Zadar</Link>
+            <Link href="/vjencanja/sibenik" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Šibenik</Link>
+            <Link href="/vjencanja/makarska" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Makarska</Link>
+            <Link href="/vjencanja/rovinj" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Rovinj</Link>
+            <Link href="/vjencanja/opatija" className="font-body text-[10px] text-[#999999] hover:text-[#111111] transition-colors">Opatija</Link>
+          </div>
         </div>
 
         {/* Copyright */}

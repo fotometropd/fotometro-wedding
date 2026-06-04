@@ -51,7 +51,7 @@ export function CustomCursor() {
     <>
       {/* Hide default cursor globally ONLY on desktop */}
       <style dangerouslySetInnerHTML={{ __html: '* { cursor: none !important; }' }} />
-      
+
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference flex items-center justify-center"
         animate={{
@@ -69,8 +69,8 @@ export function CustomCursor() {
         }}
       >
         <div className="w-full h-full bg-white rounded-full flex items-center justify-center relative">
-          <motion.span 
-            className="text-black font-body text-[8px] font-bold uppercase tracking-widest absolute"
+          <motion.span
+            className="text-black font-body text-[7px] font-bold uppercase tracking-widest absolute"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: isHovering ? 1 : 0, scale: isHovering ? 1 : 0.5 }}
             transition={{ duration: 0.2 }}
