@@ -1,94 +1,82 @@
 'use client'
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
-import { SectionHeading } from '@/components/ui/SectionHeading'
 
 const services = [
   {
-    id: 'fotografisanje',
-    eyebrow: '01',
-    title: 'Fotografija vjenčanja',
-    description: 'Svaki pogled, svaka suza, svaki zagrljaj — uhvaćeni u savršenom trenutku. Fotografije koje ćete čuvati generacijama.',
-    href: '/usluge/fotografisanje',
-    imageSrc: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop',
-    imageAlt: 'Profesionalna fotografija vjenčanja',
+    id: '01',
+    title: 'Fotografija Vjenčanja',
+    description: 'Dokumentujemo vaš najvažniji dan sa fokusom na iskrene emocije, prirodnu svjetlost i bezvremensku estetiku. Kao vodeći svadbeni fotografi u Prijedoru i širom Balkana, stvaramo vizuelno naslijeđe koje traje zauvijek. Naš stil je nenametljiv, elegantan i potpuno posvećen vama.',
+    keywords: 'Svadbeni fotograf Prijedor, fotografisanje vjenčanja BiH, destination wedding photographer'
   },
   {
-    id: 'snimanje',
-    eyebrow: '02',
-    title: 'Video produkcija vjenčanja',
-    description: 'Vrhunsko filmsko snimanje koje priča vašu jedinstvenu priču. Dostupni smo za vjenčanja u cijeloj BiH i širom Evrope.',
-    href: '/usluge/snimanje',
-    imageSrc: 'https://images.unsplash.com/photo-1581338834647-b0fb40704e21?q=80&w=1974&auto=format&fit=crop',
-    imageAlt: 'Video produkcija vjenčanja Prijedor',
+    id: '02',
+    title: 'Filmska Video Produkcija',
+    description: 'Filmski pristup snimanju vjenčanja koji bilježi atmosferu, suze radosnice i svaki osmijeh. Koristimo najsavremeniju kino-opremu kako bismo vašu priču ispričali kroz pokretnu sliku, stvarajući luksuzni svadbeni film dostojan kino dvorane.',
+    keywords: 'Snimanje svadbi, wedding videographer Bosnia, filmsko snimanje vjenčanja'
   },
   {
-    id: 'dron',
-    eyebrow: '03',
-    title: 'Snimanje dronom',
-    description: 'Spektakularne perspektive iz zraka pomoću DJI Avata drona. Najljepši predjeli Bosne i Hercegovine ili Evrope viđeni iz nebeskog ugla.',
-    href: '/usluge/dron',
-    imageSrc: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2070&auto=format&fit=crop',
-    imageAlt: 'Snimanje vjenčanja dronom Bosna',
-  },
+    id: '03',
+    title: 'Snimanje Dronom (DJI Avata)',
+    description: 'Podignite vašu priču na viši nivo uz spektakularne kadrove iz zraka. Profesionalno aerial snimanje dronom dodaje epsku dimenziju vašem svadbenom filmu, bilježeći grandioznost lokacije i ljepotu prirode.',
+    keywords: 'Snimanje dronom vjenčanja, aerial videography, DJI dron svadbe'
+  }
 ]
 
 export function ServicesSection() {
   return (
-    <section id="usluge" className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
-
+    <section id="usluge" className="py-32 sm:py-48 bg-white border-t border-stone/10">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
+        
         <ScrollReveal>
-          <SectionHeading
-            eyebrow="Naše usluge"
-            title="Kompletan doživljaj vašeg vjenčanja"
-            subtitle="Od prvog kadra do finalne isporuke — sve što vam treba na jednom mjestu"
-          />
+          <div className="mb-24 md:mb-32">
+            <span className="font-body text-[10px] tracking-[0.4em] uppercase text-stone mb-6 block">Ekspertiza</span>
+            <h2 className="font-heading font-light text-obsidian text-4xl sm:text-6xl md:text-7xl leading-tight">
+              Umjetnost bilježenja<br />
+              <span className="italic text-charcoal">vaših uspomena.</span>
+            </h2>
+          </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="flex flex-col border-t border-stone/20">
           {services.map((service, index) => (
-            <ScrollReveal key={service.id} delay={index * 0.15}>
-              <Link href={service.href} className="group block">
-                <div className="relative overflow-hidden aspect-[3/4] mb-6">
-                  <Image
-                    src={service.imageSrc}
-                    alt={service.imageAlt}
-                    fill
-                    loading="lazy"
-                    quality={85}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
-
-                  {/* Number overlay */}
-                  <div className="absolute top-6 left-6">
-                    <span className="font-heading text-white/30 font-light" style={{ fontSize: '80px', lineHeight: 1 }}>
-                      {service.eyebrow}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <h3 className="font-heading font-light text-obsidian text-2xl group-hover:text-gold transition-colors duration-300">
+            <ScrollReveal key={service.id} delay={index * 0.1}>
+              <div className="group flex flex-col md:flex-row md:items-start justify-between py-12 md:py-16 border-b border-stone/20 transition-colors hover:bg-[#fafafa]">
+                
+                {/* Left: Number & Title */}
+                <div className="md:w-1/3 mb-6 md:mb-0 pr-8">
+                  <span className="font-body text-xs text-stone mb-4 block">{service.id}</span>
+                  <h3 className="font-heading text-2xl md:text-3xl text-obsidian group-hover:text-gold transition-colors duration-500">
                     {service.title}
                   </h3>
-                  <p className="font-body text-stone text-sm leading-relaxed">
+                </div>
+
+                {/* Right: Description & SEO Keywords */}
+                <div className="md:w-1/2 flex flex-col justify-between">
+                  <p className="font-body text-[#555555] leading-loose font-light mb-8">
                     {service.description}
                   </p>
-                  <div className="flex items-center gap-2 font-body text-[10px] tracking-widest uppercase text-charcoal">
-                    <span>Saznajte više</span>
-                    <span className="w-6 h-[1px] bg-charcoal group-hover:w-10 transition-all duration-300" />
+                  
+                  {/* Hidden/Subtle Keywords for SEO */}
+                  <p className="font-body text-[9px] uppercase tracking-widest text-stone/50">
+                    {service.keywords}
+                  </p>
+                  
+                  <div className="mt-8">
+                    <a 
+                      href="viber://chat?number=%2B38765679112" 
+                      className="inline-block border-b border-obsidian pb-1 font-body text-[10px] tracking-[0.2em] uppercase text-obsidian hover:text-stone hover:border-stone transition-all duration-300"
+                    >
+                      Rezervišite termin
+                    </a>
                   </div>
                 </div>
-              </Link>
+                
+              </div>
             </ScrollReveal>
           ))}
         </div>
+
       </div>
     </section>
   )

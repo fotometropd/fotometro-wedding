@@ -31,6 +31,18 @@ export function JsonLd() {
             name: 'Bosnia and Herzegovina'
           },
           {
+            '@type': 'Country',
+            name: 'Serbia'
+          },
+          {
+            '@type': 'Country',
+            name: 'Croatia'
+          },
+          {
+            '@type': 'Country',
+            name: 'Montenegro'
+          },
+          {
             '@type': 'Continent',
             name: 'Europe'
           }

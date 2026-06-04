@@ -1,13 +1,5 @@
 import type { GalleryImage } from '@/types'
 
-export const galleryCategories = [
-  { value: 'sve', label: 'Sve' },
-  { value: 'vjencanje', label: 'Vjenčanja' },
-  { value: 'snimanje', label: 'Snimanje' },
-  { value: 'dron', label: 'Dron' },
-  { value: 'portret', label: 'Portret' },
-]
-
 export const galleryImages: GalleryImage[] = [
   { id: '100', src: '/images/gallery/fotometro-wedding-100.jpg', alt: 'Fotografija vjenčanja Prijedor - Fotometro Wedding', width: 1200, height: 800, category: 'vjencanje' },
   { id: '101', src: '/images/gallery/fotometro-wedding-101.jpg', alt: 'Fotografija vjenčanja BiH - Fotometro Wedding', width: 1200, height: 800, category: 'vjencanje' },

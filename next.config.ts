@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     // Device sizes for responsive srcsets
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 512],
+    qualities: [25, 50, 75, 80, 85, 90, 100],
     
     // Cache optimized images for 1 year (31536000 seconds)
     minimumCacheTTL: 31536000,
