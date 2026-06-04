@@ -24,7 +24,7 @@ export function LocalizedIntro({ cityName, shortName }: { cityName: string, shor
                 Vjenčanja u
               </motion.span>
             </span>
-            <span className="block overflow-hidden pb-2 -ml-2">
+            <span className="block overflow-hidden pb-2 md:ml-32 ml-12">
               <motion.span 
                 className="block italic text-stone"
                 initial={{ y: "100%" }}

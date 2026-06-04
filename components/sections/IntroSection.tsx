@@ -24,14 +24,14 @@ export function IntroSection() {
                 Fotografišemo
               </motion.span>
             </span>
-            <span className="block overflow-hidden pb-2 -ml-2">
+            <span className="block overflow-hidden pb-2 md:ml-32 ml-12">
               <motion.span
-                className="block italic text-stone"
+                className="block"
                 initial={{ y: "100%" }}
                 animate={isInView ? { y: 0 } : { y: "100%" }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
               >
-                vaše najljepše
+                vaše <span className="italic text-stone">najljepše</span>
               </motion.span>
             </span>
             <span className="block overflow-hidden pb-2">

@@ -3,6 +3,7 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { SmoothScroll } from '@/components/ui/SmoothScroll'
 import { CustomCursor } from '@/components/ui/CustomCursor'
+import { FloatingViberButton } from '@/components/ui/FloatingViberButton'
 import { JsonLd } from '@/components/seo/JsonLd'
 import './globals.css'
 import type { Metadata } from 'next'
@@ -113,6 +114,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </SmoothScroll>
+        <FloatingViberButton />
       </body>
     </html>
   )
