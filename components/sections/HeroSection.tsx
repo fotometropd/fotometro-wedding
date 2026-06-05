@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 const HERO_IMAGES = [
-  '/images/gallery/001.jpg',
-  '/images/gallery/002.jpg',
-  '/images/gallery/DEJ06281.jpg',
+  '/images/gallery/fotometrowedding (80).jpg',
+  '/images/gallery/fotometrowedding (81).jpg',
+  '/images/gallery/fotometrowedding (82).jpg',
 ]
 
 export function HeroSection() {
@@ -39,7 +39,7 @@ export function HeroSection() {
               fill
               priority
               quality={100}
-              className="object-cover object-center"
+              className="object-cover object-[center_35%]"
               sizes="100vw"
             />
           </motion.div>

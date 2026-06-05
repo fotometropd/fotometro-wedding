@@ -10,12 +10,21 @@ export function CustomCursor() {
   const [isMobile, setIsMobile] = useState(true)
 
   useEffect(() => {
-    // Only enable custom cursor on devices with a precise pointer (mouse)
-    const hasPointer = window.matchMedia('(pointer: fine)').matches
-    if (!hasPointer) {
-      return
+    const checkMobile = () => {
+      const isTouch = window.matchMedia('(pointer: coarse)').matches
+      const isSmallScreen = window.innerWidth < 768
+      if (isTouch || isSmallScreen) {
+        setIsMobile(true)
+      } else {
+        setIsMobile(false)
+      }
     }
-    setIsMobile(false)
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+
+    if (isMobile) return
+
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
       if (!isVisible) setIsVisible(true)
@@ -40,10 +49,11 @@ export function CustomCursor() {
     window.addEventListener('mouseover', handleMouseOver)
 
     return () => {
+      window.removeEventListener('resize', checkMobile)
       window.removeEventListener('mousemove', updateMousePosition)
       window.removeEventListener('mouseover', handleMouseOver)
     }
-  }, [isVisible])
+  }, [isVisible, isMobile])
 
   if (typeof window === 'undefined' || isMobile) return null
 

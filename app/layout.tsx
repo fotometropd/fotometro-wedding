@@ -4,13 +4,14 @@ import { Footer } from '@/components/layout/Footer'
 import { SmoothScroll } from '@/components/ui/SmoothScroll'
 import { CustomCursor } from '@/components/ui/CustomCursor'
 import { FloatingViberButton } from '@/components/ui/FloatingViberButton'
+import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton'
 import { JsonLd } from '@/components/seo/JsonLd'
 import './globals.css'
 import type { Metadata } from 'next'
 
 // Configure Fonts
 const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   weight: ['300', '400', '500', '600'],
   style: ['normal', 'italic'],
   variable: '--font-cormorant',
@@ -18,7 +19,7 @@ const cormorant = Cormorant_Garamond({
 })
 
 const dmSans = DM_Sans({
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   weight: ['400', '500'],
   variable: '--font-dm-sans',
   display: 'swap',
@@ -97,7 +98,7 @@ export default function RootLayout({
       <head>
         <JsonLd />
       </head>
-      <body className="antialiased min-h-screen flex flex-col bg-white text-[#111111] font-body selection:bg-[#eeeeee] selection:text-[#111111] relative">
+      <body className="antialiased min-h-screen flex flex-col bg-white text-[#111111] font-body selection:bg-[#eeeeee] selection:text-[#111111] relative overflow-x-hidden w-full">
         <CustomCursor />
         {/* Subtle Photographic Film Grain */}
         <svg className="pointer-events-none fixed inset-0 z-[9998] h-full w-full opacity-[0.02]" xmlns="http://www.w3.org/2000/svg">
@@ -115,6 +116,7 @@ export default function RootLayout({
           <Footer />
         </SmoothScroll>
         <FloatingViberButton />
+        <ScrollToTopButton />
       </body>
     </html>
   )

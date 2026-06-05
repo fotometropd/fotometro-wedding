@@ -90,8 +90,8 @@ export function JsonLd() {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'Service',
-                name: 'Snimanje dronom DJI Avata',
-                description: 'Profesionalno aerial snimanje vjenčanja dronom DJI Avata',
+                name: 'Snimanje dronom DJI',
+                description: 'Profesionalno aerial snimanje vjenčanja dronom DJI',
               },
             },
           ],

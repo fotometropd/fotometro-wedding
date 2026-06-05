@@ -10,7 +10,7 @@ const stories = [
     id: 1,
     title: '',
     location: '',
-    image: '/images/gallery/001.jpg',
+    image: '/images/gallery/fotometrowedding (1).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0'
   },
@@ -18,7 +18,7 @@ const stories = [
     id: 2,
     title: '',
     location: '',
-    image: '/images/gallery/001_1.jpg',
+    image: '/images/gallery/fotometrowedding (2).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -26,7 +26,7 @@ const stories = [
     id: 3,
     title: '',
     location: '',
-    image: '/images/gallery/002.jpg',
+    image: '/images/gallery/fotometrowedding (3).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -34,7 +34,7 @@ const stories = [
     id: 4,
     title: '',
     location: '',
-    image: '/images/gallery/002_1.jpg',
+    image: '/images/gallery/fotometrowedding (4).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -42,7 +42,7 @@ const stories = [
     id: 5,
     title: '',
     location: '',
-    image: '/images/gallery/003.jpg',
+    image: '/images/gallery/fotometrowedding (5).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -50,7 +50,7 @@ const stories = [
     id: 6,
     title: '',
     location: '',
-    image: '/images/gallery/003_1.jpg',
+    image: '/images/gallery/fotometrowedding (6).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -58,7 +58,7 @@ const stories = [
     id: 7,
     title: '',
     location: '',
-    image: '/images/gallery/004.jpg',
+    image: '/images/gallery/fotometrowedding (7).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -66,7 +66,7 @@ const stories = [
     id: 8,
     title: '',
     location: '',
-    image: '/images/gallery/005.jpg',
+    image: '/images/gallery/fotometrowedding (8).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -74,7 +74,7 @@ const stories = [
     id: 9,
     title: '',
     location: '',
-    image: '/images/gallery/006.jpg',
+    image: '/images/gallery/fotometrowedding (9).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -82,7 +82,7 @@ const stories = [
     id: 10,
     title: '',
     location: '',
-    image: '/images/gallery/007.jpg',
+    image: '/images/gallery/fotometrowedding (10).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -90,7 +90,7 @@ const stories = [
     id: 11,
     title: '',
     location: '',
-    image: '/images/gallery/009.jpg',
+    image: '/images/gallery/fotometrowedding (11).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -98,7 +98,7 @@ const stories = [
     id: 12,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06268.jpg',
+    image: '/images/gallery/fotometrowedding (12).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -106,7 +106,7 @@ const stories = [
     id: 13,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06281.jpg',
+    image: '/images/gallery/fotometrowedding (13).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -114,7 +114,7 @@ const stories = [
     id: 14,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06353.jpg',
+    image: '/images/gallery/fotometrowedding (14).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -122,7 +122,7 @@ const stories = [
     id: 15,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06358.jpg',
+    image: '/images/gallery/fotometrowedding (15).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -130,7 +130,7 @@ const stories = [
     id: 16,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06378.jpg',
+    image: '/images/gallery/fotometrowedding (16).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -138,7 +138,7 @@ const stories = [
     id: 17,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06439.jpg',
+    image: '/images/gallery/fotometrowedding (17).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -146,7 +146,7 @@ const stories = [
     id: 18,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06472.jpg',
+    image: '/images/gallery/fotometrowedding (18).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -154,7 +154,7 @@ const stories = [
     id: 19,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06497.jpg',
+    image: '/images/gallery/fotometrowedding (19).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -162,7 +162,7 @@ const stories = [
     id: 20,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06565.jpg',
+    image: '/images/gallery/fotometrowedding (20).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -170,7 +170,7 @@ const stories = [
     id: 21,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06599.jpg',
+    image: '/images/gallery/fotometrowedding (21).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -178,7 +178,7 @@ const stories = [
     id: 22,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06645.jpg',
+    image: '/images/gallery/fotometrowedding (22).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -186,7 +186,7 @@ const stories = [
     id: 23,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06690.jpg',
+    image: '/images/gallery/fotometrowedding (23).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -194,7 +194,7 @@ const stories = [
     id: 24,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06707.jpg',
+    image: '/images/gallery/fotometrowedding (24).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -202,7 +202,7 @@ const stories = [
     id: 25,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06730.jpg',
+    image: '/images/gallery/fotometrowedding (25).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -210,7 +210,7 @@ const stories = [
     id: 26,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06744.jpg',
+    image: '/images/gallery/fotometrowedding (26).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -218,7 +218,7 @@ const stories = [
     id: 27,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06751.jpg',
+    image: '/images/gallery/fotometrowedding (27).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -226,7 +226,7 @@ const stories = [
     id: 28,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06781.jpg',
+    image: '/images/gallery/fotometrowedding (28).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -234,7 +234,7 @@ const stories = [
     id: 29,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06786.jpg',
+    image: '/images/gallery/fotometrowedding (29).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -242,7 +242,7 @@ const stories = [
     id: 30,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ06812.jpg',
+    image: '/images/gallery/fotometrowedding (30).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -250,7 +250,7 @@ const stories = [
     id: 31,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ07001.jpg',
+    image: '/images/gallery/fotometrowedding (31).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -258,7 +258,7 @@ const stories = [
     id: 32,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ07010.jpg',
+    image: '/images/gallery/fotometrowedding (32).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -266,7 +266,7 @@ const stories = [
     id: 33,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ07011.jpg',
+    image: '/images/gallery/fotometrowedding (33).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -274,7 +274,7 @@ const stories = [
     id: 34,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ07020.jpg',
+    image: '/images/gallery/fotometrowedding (34).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -282,7 +282,7 @@ const stories = [
     id: 35,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ07022.jpg',
+    image: '/images/gallery/fotometrowedding (35).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -290,7 +290,7 @@ const stories = [
     id: 36,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ07023.jpg',
+    image: '/images/gallery/fotometrowedding (36).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -298,7 +298,7 @@ const stories = [
     id: 37,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ07556.jpg',
+    image: '/images/gallery/fotometrowedding (37).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -306,7 +306,7 @@ const stories = [
     id: 38,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ07585.jpg',
+    image: '/images/gallery/fotometrowedding (38).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -314,7 +314,7 @@ const stories = [
     id: 39,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ07687.jpg',
+    image: '/images/gallery/fotometrowedding (39).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -322,7 +322,7 @@ const stories = [
     id: 40,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ09460.jpg',
+    image: '/images/gallery/fotometrowedding (40).jpg',
     aspectRatio: 'aspect-[4/5]',
     marginTop: 'md:mt-32'
   },
@@ -330,7 +330,7 @@ const stories = [
     id: 41,
     title: '',
     location: '',
-    image: '/images/gallery/DEJ09462.jpg',
+    image: '/images/gallery/fotometrowedding (41).jpg',
     aspectRatio: 'aspect-[3/4]',
     marginTop: 'mt-0 md:-mt-16'
   },
@@ -362,7 +362,7 @@ function ParallaxImage({ story, onClick }: { story: any, onClick: () => void }) 
         <motion.div style={{ y }} className="absolute inset-[-20%] w-[140%] h-[140%]">
           <Image
             src={story.image}
-            alt={"Fotometro Wedding"}
+            alt={story.title || "Svadbeni fotograf Prijedor Bosna"}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
