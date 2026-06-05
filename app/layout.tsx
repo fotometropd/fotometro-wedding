@@ -1,31 +1,27 @@
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
-import { SmoothScroll } from '@/components/ui/SmoothScroll'
-import { CustomCursor } from '@/components/ui/CustomCursor'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { FloatingViberButton } from '@/components/ui/FloatingViberButton'
 import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton'
-import { JsonLd } from '@/components/seo/JsonLd'
 import './globals.css'
 import type { Metadata } from 'next'
 
 // Configure Fonts
 const cormorant = Cormorant_Garamond({
   subsets: ['latin', 'latin-ext'],
-  weight: ['300', '400', '500', '600'],
-  style: ['normal', 'italic'],
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--font-cormorant',
   display: 'swap',
 })
 
 const dmSans = DM_Sans({
   subsets: ['latin', 'latin-ext'],
-  weight: ['400', '500'],
+  weight: ['300', '400', '500'],
   variable: '--font-dm-sans',
   display: 'swap',
 })
 
-// Global Metadata
 export const metadata: Metadata = {
   metadataBase: new URL('https://fotometrowedding.com'),
   title: {
@@ -63,7 +59,7 @@ export const metadata: Metadata = {
     siteName: 'Fotometro Wedding',
     images: [
       {
-        url: '/images/og-image.jpg', // Add this later
+        url: '/images/og-image.jpg', // Ensure you place your best photo here
         width: 1200,
         height: 630,
         alt: 'Fotometro Wedding Portfolio',
@@ -86,6 +82,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code', // Replace
   },
+  alternates: {
+    canonical: 'https://fotometrowedding.com',
+  },
 }
 
 export default function RootLayout({
@@ -94,27 +93,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="sr" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="sr" className={`${cormorant.variable} ${dmSans.variable} scroll-smooth`}>
       <head>
         <JsonLd />
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-white text-[#111111] font-body selection:bg-[#eeeeee] selection:text-[#111111] relative overflow-x-hidden w-full">
-        <CustomCursor />
         {/* Subtle Photographic Film Grain */}
         <svg className="pointer-events-none fixed inset-0 z-[9998] h-full w-full opacity-[0.02]" xmlns="http://www.w3.org/2000/svg">
           <filter id="noiseFilter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
           </filter>
           <rect width="100%" height="100%" filter="url(#noiseFilter)" />
         </svg>
 
-        <SmoothScroll>
-          <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </SmoothScroll>
+        <Navbar />
+        <main className="flex-grow flex flex-col relative z-10 w-full overflow-hidden">
+          {children}
+        </main>
+        <Footer />
         <FloatingViberButton />
         <ScrollToTopButton />
       </body>
