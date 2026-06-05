@@ -7,41 +7,53 @@ import Image from 'next/image'
 export function IntroSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-10%" })
-  
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start']
   })
-  
-  // Parallax translation
-  const y = useTransform(scrollYProgress, [0, 1], ['-20%', '20%'])
+
+  // Reduced parallax stretch to retain photo quality
+  const y = useTransform(scrollYProgress, [0, 1], ['-5%', '5%'])
 
   return (
-    <section ref={ref} id="intro" className="relative w-full h-[80vh] md:h-[100vh] flex items-center justify-center overflow-hidden bg-obsidian">
-      
+    <section ref={ref} id="intro" className="relative w-full min-h-[100dvh] md:h-[100vh] py-24 md:py-0 flex items-center justify-center overflow-hidden bg-obsidian">
+
       {/* Background Parallax Image */}
-      <motion.div style={{ y }} className="absolute inset-[-20%] w-[140%] h-[140%] z-0">
+      <motion.div style={{ y }} className="absolute inset-[-10%] w-[120%] h-[120%] z-0">
+        {/* Desktop Image */}
         <Image
-          src="/images/gallery/fotometrowedding (21).jpg"
+          src="/images/gallery/fotometrowedding (65).jpg"
           alt="Fotografišemo vaše najljepše trenutke"
           fill
-          className="object-cover object-center"
+          priority
+          quality={100}
+          className="object-cover object-center opacity-20 hidden md:block"
           sizes="100vw"
         />
-        {/* Luxury Dark Overlay */}
-        <div className="absolute inset-0 bg-obsidian/60 backdrop-blur-[2px]" />
+        
+        {/* Mobile Image */}
+        <Image
+          src="/images/gallery/fotometrowedding (77).jpg"
+          alt="Fotografišemo vaše najljepše trenutke"
+          fill
+          priority
+          quality={100}
+          className="object-cover object-center opacity-20 md:hidden block"
+          sizes="100vw"
+        />
       </motion.div>
 
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-12 flex flex-col justify-center h-full text-white pt-20">
-        
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-12 flex flex-col justify-center h-full text-white pt-0 md:pt-20">
+
         {/* 2026 Cinematic Split Layout */}
         <div className="flex flex-col w-full">
-          
+
           {/* Top Line: Fotografišemo */}
           <div className="flex justify-start overflow-hidden pb-6 md:pb-10">
-            <motion.h1 
+            <motion.h1
               className="font-heading font-light tracking-tight leading-[0.9] drop-shadow-2xl"
-              style={{ fontSize: 'clamp(50px, 8vw, 140px)' }}
+              style={{ fontSize: 'clamp(38px, 10vw, 140px)' }}
               initial={{ y: "100%" }}
               animate={isInView ? { y: 0 } : { y: "100%" }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -51,7 +63,7 @@ export function IntroSection() {
           </div>
 
           {/* Animated Divider */}
-          <motion.div 
+          <motion.div
             className="w-full h-[1px] bg-white/20"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
@@ -60,10 +72,10 @@ export function IntroSection() {
           />
 
           {/* Bottom Grid */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-start pt-12 md:pt-16 gap-12">
-            
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-start pt-12 md:pt-16 gap-8 md:gap-12">
+
             {/* Location block - Left */}
-            <motion.div 
+            <motion.div
               className="flex flex-col gap-4 order-2 md:order-1"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -77,14 +89,14 @@ export function IntroSection() {
 
             {/* The rest of the phrase - Right */}
             <div className="overflow-hidden order-1 md:order-2 w-full text-left md:text-right">
-              <motion.h2 
+              <motion.h2
                 className="font-heading font-light leading-[1.05] drop-shadow-2xl"
-                style={{ fontSize: 'clamp(40px, 6vw, 110px)' }}
+                style={{ fontSize: 'clamp(32px, 8vw, 110px)' }}
                 initial={{ y: "-100%" }}
                 animate={isInView ? { y: 0 } : { y: "-100%" }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               >
-                vaše <span className="italic text-white/70">najljepše</span><br/>
+                vaše <span className="italic text-white/70">najljepše</span><br />
                 trenutke.
               </motion.h2>
             </div>
