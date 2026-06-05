@@ -8,7 +8,6 @@ const navLinks = [
   { name: 'Početna', href: '/' },
   { name: 'Galerija', href: '/#galerija' },
   { name: 'Usluge', href: '/#usluge' },
-  { name: 'O nama', href: '/#o-nama' },
   { name: 'Kontakt', href: 'viber://chat?number=%2B38765679112' },
 ]
 

@@ -15,7 +15,7 @@ export function Footer() {
 
         {/* Minimal Links */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 mb-16">
-          <a href="mailto:fotometropd@gmail.com" className="font-body text-[10px] tracking-[0.2em] uppercase text-[#111111] hover:text-[#777777] transition-colors">
+          <a href="viber://chat?number=%2B38765679112" className="font-body text-[10px] tracking-[0.2em] uppercase text-[#111111] hover:text-[#777777] transition-colors">
             Pošaljite Upit
           </a>
         </div>
