@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://fotometrowedding.com'),
   title: {
     template: '%s | Fotometro Wedding',
-    default: 'Fotometro | Najbolji Fotograf za Vjenčanja Prijedor, BiH i Balkan',
+    default: 'Fotometro | Fotografisanje vjenčanja',
   },
   description: 'Fotometro iz Prijedora pruža vrhunsku, luksuznu fotografiju i video produkciju za vjenčanja širom Balkana (BiH, Srbija, Hrvatska). Filmsko snimanje, dron i bezvremenske uspomene. Rezervišite odmah!',
   keywords: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     'Fotometro Prijedor',
     'snimanje vjenčanja Prijedor',
     'fotograf za svadbe Prijedor',
-    'najbolji fotograf za vjenčanja BiH',
+    'fotograf za vjenčanja BiH',
     'svadbeni fotograf Banja Luka',
     'fotografisanje vjenčanja Sarajevo',
     'wedding photographer Balkans',
@@ -103,9 +103,9 @@ export default function RootLayout({
         {/* Subtle Photographic Film Grain */}
         <svg className="pointer-events-none fixed inset-0 z-[9998] h-full w-full opacity-[0.02]" xmlns="http://www.w3.org/2000/svg">
           <filter id="noiseFilter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
           </filter>
-          <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+          <rect width="100%" height="100%" filter="url(#noiseFilter)" />
         </svg>
 
         <SmoothScroll>
