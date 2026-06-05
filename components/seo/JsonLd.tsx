@@ -10,7 +10,7 @@ export function JsonLd() {
         description: 'Moderna fotografija, filmsko snimanje i snimanje dronom za vjenčanja u Prijedoru, širom Bosne i Hercegovine i Evrope.',
         url: 'https://fotometrowedding.com',
         telephone: '+38765679112',
-        email: 'fotomeropd@gmail.com',
+        email: 'fotometropd@gmail.com',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Prijedor',
