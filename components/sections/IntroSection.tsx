@@ -13,14 +13,14 @@ export function IntroSection() {
     offset: ['start end', 'end start']
   })
 
-  // Reduced parallax stretch to retain photo quality
-  const y = useTransform(scrollYProgress, [0, 1], ['-5%', '5%'])
+  // Highly visible, dramatic parallax effect
+  const y = useTransform(scrollYProgress, [0, 1], ['-25%', '25%'])
 
   return (
     <section ref={ref} id="intro" className="relative w-full min-h-[100dvh] md:h-[100vh] py-24 md:py-0 flex items-center justify-center overflow-hidden bg-obsidian">
 
       {/* Background Parallax Image */}
-      <motion.div style={{ y }} className="absolute inset-[-10%] w-[120%] h-[120%] z-0">
+      <motion.div style={{ y }} className="absolute inset-[-25%] w-[150%] h-[150%] z-0">
         {/* Desktop Image */}
         <Image
           src="/images/gallery/fotometrowedding (65).jpg"
@@ -28,7 +28,7 @@ export function IntroSection() {
           fill
           priority
           quality={100}
-          className="object-cover object-center opacity-20 hidden md:block"
+          className="object-cover object-center opacity-40 hidden md:block"
           sizes="100vw"
         />
         
@@ -39,7 +39,7 @@ export function IntroSection() {
           fill
           priority
           quality={100}
-          className="object-cover object-center opacity-20 md:hidden block"
+          className="object-cover object-center opacity-40 md:hidden block"
           sizes="100vw"
         />
       </motion.div>
@@ -53,7 +53,7 @@ export function IntroSection() {
           <div className="flex justify-start overflow-hidden pb-6 md:pb-10">
             <motion.h1
               className="font-heading font-light tracking-tight leading-[0.9] drop-shadow-2xl"
-              style={{ fontSize: 'clamp(38px, 10vw, 140px)' }}
+              style={{ fontSize: 'clamp(46px, 12vw, 150px)' }}
               initial={{ y: "100%" }}
               animate={isInView ? { y: 0 } : { y: "100%" }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -88,10 +88,10 @@ export function IntroSection() {
             </motion.div>
 
             {/* The rest of the phrase - Right */}
-            <div className="overflow-hidden order-1 md:order-2 w-full text-left md:text-right">
+            <div className="overflow-hidden order-1 md:order-2 w-full text-right">
               <motion.h2
                 className="font-heading font-light leading-[1.05] drop-shadow-2xl"
-                style={{ fontSize: 'clamp(32px, 8vw, 110px)' }}
+                style={{ fontSize: 'clamp(38px, 10vw, 120px)' }}
                 initial={{ y: "-100%" }}
                 animate={isInView ? { y: 0 } : { y: "-100%" }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
