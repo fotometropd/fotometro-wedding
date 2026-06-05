@@ -8,14 +8,16 @@ import { useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { createPortal } from 'react-dom'
 import { X } from 'lucide-react'
 
-// Define the landscape IDs based on actual file dimensions
-const landscapeIds = new Set([3, 4, 6, 7, 8, 9, 10, 14, 15, 17, 21, 22, 23, 31, 39, 40, 41])
+// Define the exact IDs of files that exist in the gallery folder, statically shuffled for a mixed layout
+const availableImageIds = [29, 54, 24, 34, 16, 65, 36, 12, 41, 72, 42, 7, 3, 80, 66, 74, 58, 69, 78, 63, 45, 55, 89, 61, 48, 21, 47, 31, 81, 79, 85, 10, 38, 88, 26, 86, 15, 73, 77, 76, 71, 56, 5, 75, 70, 11, 39, 2, 53, 52, 62, 17, 22, 67, 4, 23, 49, 60, 14, 8, 57, 59, 1, 9, 30, 13, 68, 64, 87, 6]
 
-const stories = Array.from({ length: 41 }, (_, i) => {
-  const id = i + 1;
+// Define the landscape IDs based on actual file dimensions
+const landscapeIds = new Set([3, 4, 6, 7, 8, 9, 10, 14, 15, 17, 21, 22, 23, 31, 39, 41, 42, 55, 56, 57, 58, 63, 65, 68, 69, 70, 72, 76, 79, 80, 88])
+
+const stories = availableImageIds.map((id, index) => {
   const isLandscape = landscapeIds.has(id);
   
-  let aspectRatio = isLandscape ? 'aspect-[3/2]' : (id % 2 === 0 ? 'aspect-[4/5]' : 'aspect-[3/4]');
+  let aspectRatio = isLandscape ? 'aspect-[3/2]' : (index % 2 === 0 ? 'aspect-[4/5]' : 'aspect-[3/4]');
 
   return {
     id,
