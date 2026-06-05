@@ -5,9 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 const HERO_IMAGES = [
-  '/images/gallery/fotometrowedding (80).jpg',
-  '/images/gallery/fotometrowedding (81).jpg',
-  '/images/gallery/fotometrowedding (82).jpg',
+  '/images/gallery/fotometrowedding (86).jpg',
+  '/images/gallery/fotometrowedding (48).jpg',
+  '/images/gallery/fotometrowedding (67).jpg',
+  '/images/gallery/fotometrowedding (49).jpg',
+  '/images/gallery/fotometrowedding (88).jpg',
 ]
 
 export function HeroSection() {

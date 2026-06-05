@@ -12,7 +12,7 @@ export function AboutMinimalSection() {
           <ScrollReveal direction="left">
             <div className="relative w-full aspect-[3/4] bg-[#f7f7f7]">
               <Image
-                src="/images/gallery/DEJ06565.jpg"
+                src="/images/gallery/fotometrowedding (48).jpg"
                 alt="Fotometro Wedding Photographer"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
