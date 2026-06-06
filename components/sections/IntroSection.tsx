@@ -8,19 +8,11 @@ export function IntroSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-10%" })
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start']
-  })
-
-  // Highly visible, dramatic parallax effect
-  const y = useTransform(scrollYProgress, [0, 1], ['-25%', '25%'])
-
   return (
     <section ref={ref} id="intro" className="relative w-full min-h-[100dvh] md:h-[100vh] py-24 md:py-0 flex items-center justify-center overflow-hidden bg-obsidian">
 
-      {/* Background Parallax Image */}
-      <motion.div style={{ y }} className="absolute inset-[-25%] w-[150%] h-[150%] z-0">
+      {/* Background Image (Static for performance) */}
+      <motion.div className="absolute inset-0 w-full h-full z-0">
         {/* Desktop Image */}
         <Image
           src="/images/gallery/fotometrowedding (65).jpg"
