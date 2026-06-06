@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://fotometrowedding.com'),
   title: {
     template: '%s | Fotometro Wedding',
-    default: 'Fotometro | Fotografisanje vjenčanja',
+    default: 'Fotometro Wedding | Fotografisanje vjenčanja',
   },
   description: 'Fotometro iz Prijedora pruža vrhunsku, luksuznu fotografiju i video produkciju za vjenčanja širom Balkana (BiH, Srbija, Hrvatska). Filmsko snimanje, dron i bezvremenske uspomene. Rezervišite odmah!',
   keywords: [
