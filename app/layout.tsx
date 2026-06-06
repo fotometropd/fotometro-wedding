@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Fotometro | Najbolji Fotograf za Vjenčanja Prijedor, BiH i Balkan',
+    title: 'Fotometro | Fotografisanje Vjenčanja Prijedor, BiH, Balkan',
     description: 'Fotometro iz Prijedora pruža vrhunsku fotografiju i filmsku video produkciju za vjenčanja širom Balkana. Kontaktirajte nas: +38765679112.',
     url: 'https://fotometrowedding.com',
     siteName: 'Fotometro Wedding',
