@@ -29,32 +29,19 @@ const stories = availableImageIds.map((id, index) => {
 })
 
 function ParallaxImage({ story, onClick }: { story: any, onClick: () => void }) {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start']
-  })
-  
-  const y = useTransform(scrollYProgress, [0, 1], ['-10%', '10%'])
-
   return (
     <div 
       className={`group block interactive mb-8 break-inside-avoid cursor-pointer`}
       onClick={onClick}
     >
-      <div 
-        ref={ref}
-        className={`relative w-full ${story.aspectRatio} overflow-hidden bg-[#f7f7f7]`}
-      >
-        <motion.div style={{ y }} className="absolute inset-[-20%] w-[140%] h-[140%]">
-          <Image
-            src={story.image}
-            alt="Svadbeni fotograf Prijedor Bosna"
-            fill
-            sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
-          />
-        </motion.div>
+      <div className={`relative w-full ${story.aspectRatio} overflow-hidden bg-[#f7f7f7]`}>
+        <Image
+          src={story.image}
+          alt="Svadbeni fotograf Prijedor Bosna"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
+        />
         <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-500" />
       </div>
     </div>
